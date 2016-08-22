@@ -77,6 +77,11 @@
                 <p>Aplikasi ini digunakan untuk keperluan <b>PASWA</b></p>
                 <p>Untuk calon peserta, klik Link <b> Pendaftran Peserta </b> lalu isikan data pada form pendaftaran, dan <b>GUNAKAN EMAIL AKTIF!</b> karena setelah submit form , Sistem akan mengirimkan akun ke email calon peserta, jika sudah mendapatkan akun,silahkan gunakan akun tersebut untuk mendaftar paswa , isilah username dan password sesuai yang tertera pada <b>EMAIL</b> dan pilih Level <b>PESERTA </b>, Setelah itu klik <b>LOGIN</b> <br> <br><b>PENTING !: <br>ISILAH DATA PRIBADI YANG VALID BAIK IDENTITAS MAUPUN FOTO PRIBADI! KARENA PANITIA TIDAK BERTANGGUNG JAWAB TERHADAP KESALAHAN DATA ANDA!</b></p>
                 
+                <p> Jika mengalami kesulitan atau masalah dalam penggunaan sistem aplikasi PASWA STIKOM CKI silahkan hubungi contact person : </p>
+                <p><b> Ahmad Fuady Mustahal : 089823847933 </b> </p>
+                <p><b> Ahmad Jazuli : 089823847933 </b> </p>
+                <p><b> Fadil : 089823847933 </b> </p>
+                
                  
             </div>
             <div class="md-card-content large-padding" id="login_password_reset" style="display: none">
@@ -95,25 +100,19 @@
             <div class="md-card-content large-padding" id="register_form" style="display: none">
                 <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top back_to_login"></button>
                 <h2 class="heading_a uk-margin-medium-bottom">Pendaftaran Peserta</h2>
-                <form>
+                <form action="<?php echo base_url('register_peserta/register'); ?>" method="POST">
                     <div class="uk-form-row">
                         <label for="register_username">Username</label>
-                        <input class="md-input" type="text" id="register_username" name="register_username" />
+                        <input class="md-input" type="text"   name="username" />
                     </div>
-                    <div class="uk-form-row">
-                        <label for="register_password">Password</label>
-                        <input class="md-input" type="password" id="register_password" name="register_password" />
-                    </div>
-                    <div class="uk-form-row">
-                        <label for="register_password_repeat">Repeat Password</label>
-                        <input class="md-input" type="password" id="register_password_repeat" name="register_password_repeat" />
-                    </div>
+                     
                     <div class="uk-form-row">
                         <label for="register_email">E-mail</label>
-                        <input class="md-input" type="text" id="register_email" name="register_email" />
+                        <input class="md-input" type="text"    name="email" />
                     </div>
                     <div class="uk-margin-medium-top">
-                        <a href="index.html" class="md-btn md-btn-primary md-btn-block md-btn-large">Sign Up</a>
+                                          <button class="md-btn md-btn-primary md-btn-block md-btn-large"> Sign Up </button>
+                     
                     </div>
                 </form>
             </div>
@@ -124,6 +123,10 @@
 
     </div>
     <marquee> <h5><b>Informasi : Pendaftaran Peserta Paswa dibuka pada tanggal 28 Agustus 2016 sampai 12 September 2016</b></h5> </marquee>
+
+    <br>
+    <h5 align="center"> <a href="mailto:okkisetyawan@gmail.com">&copy; 2016 O&S Production </a> </h5>
+
 
     <!-- common functions -->
     <script src="<?php echo base_url('assets/js/common.min.js');?>"></script>

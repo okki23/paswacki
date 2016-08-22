@@ -1,4 +1,7 @@
 <?php
+/*
+@author : Okki Setyawan &copy 2016
+*/
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
@@ -20,6 +23,8 @@ class Dashboard extends CI_Controller {
 		$data['username'] = $this->session->userdata('username');
 		$data['level'] = $this->session->userdata('level');
 		$data['user_id'] = $this->session->userdata('user_id');
+		$data['get_all_panitia'] = $this->model_dashboard->get_all_panitia()->num_rows();
+		$data['get_all_peserta'] = $this->model_dashboard->get_all_peserta()->num_rows();
 		$this->load->view('dashboard/dashboard_view',$data);
 	}
 

@@ -1,4 +1,7 @@
 <?php
+/*
+@author : Okki Setyawan &copy 2016
+*/
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Model_login extends CI_Model {

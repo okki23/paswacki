@@ -22,7 +22,7 @@
                             <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo base_url(''); ?>assets/img/avatars/user.png" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small">
                                 <ul class="uk-nav js-uk-prevent">
-                                    <li><a href="<?php echo base_url('login/account_setting'); ?>">Pengaturan Akun</a></li>
+                                    <li><a href="<?php echo base_url('account_setting'); ?>">Pengaturan Akun</a></li>
                                     <li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
                                 </ul>
                             </div>

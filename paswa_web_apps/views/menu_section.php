@@ -94,14 +94,14 @@ if($level == '1'){
                 </li>
                  
                 <li title="Invoices">
-                    <a href="<?php echo base_url('peserta/list'); ?>">
+                    <a href="<?php echo base_url('peserta'); ?>">
                         <span class="menu_icon"><i class="material-icons">supervisor_account</i></span>
                         <span class="menu_title">Peserta</span>
                     </a>
                 </li>
  
                 <li>
-                    <a href="<?php echo base_url('kelompok/list'); ?>">
+                    <a href="<?php echo base_url('kelompok'); ?>">
                         <span class="menu_icon"><i class="material-icons">folder_shared</i></span>
                         <span class="menu_title">Kelompok</span>
                     </a>
@@ -126,7 +126,7 @@ if($level == '1'){
                 </li>
 
                 <li>
-                    <a href="<?php echo base_url('panitia/list_view'); ?>">
+                    <a href="<?php echo base_url('panitia'); ?>">
                         <span class="menu_icon"><i class="material-icons">&#xE87C;</i></span>
                         <span class="menu_title">Data Panitia</span>
                     </a>

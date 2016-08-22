@@ -1,4 +1,7 @@
 <?php
+/*
+@author : Okki Setyawan &copy 2016
+*/
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Panitia extends CI_Controller {
@@ -44,12 +47,12 @@ class Panitia extends CI_Controller {
 
         if($sql){
 			    echo "<script language=javascript>
-				alert('Perubahan Data Berhasil');
+				alert('Penambahan Data Berhasil');
 				window.location='".base_url('panitia')."';
 		        </script>";
 		}else{
 				echo "<script language=javascript>
-				alert('Perubahan Data Gagal');
+				alert('Penambahan Data Gagal');
 				window.location='".base_url('panitia')."';
 		        </script>";
 		}
@@ -141,6 +144,30 @@ class Panitia extends CI_Controller {
 		$data['user_id'] = $this->session->userdata('user_id');
 		$data['listing'] = $this->model_panitia->listing();
 		$this->load->view('panitia/panitia_view',$data);
+	}
+
+	public function cetak()
+	{
+		$data['judul'] = 'Aplikasi PASWA '.date('Y');
+		$data['username'] = $this->session->userdata('username');
+		$data['level'] = $this->session->userdata('level');
+		$data['user_id'] = $this->session->userdata('user_id');
+		$data['listing'] = $this->model_panitia->listing();
+		$this->load->library('Pdf');
+		$pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+		$pdf->SetTitle('Pdf Example');
+		//$pdf->SetHeaderMargin(30);
+		//$pdf->SetTopMargin(20);
+		//$pdf->setFooterMargin(20);
+		$pdf->SetAutoPageBreak(true);
+		$pdf->SetAuthor('Author');
+		$pdf->SetDisplayMode('real', 'default');
+
+		$html = $this->load->view('panitia/panitia_print',$data,true);
+
+		$pdf->writeHTML($html, 0, 1, 0, true, '', true);   
+		ob_clean();
+		$pdf->Output('pdfexample.pdf', 'I');
 	}
 
 	public function add(){
